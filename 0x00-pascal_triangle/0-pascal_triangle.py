@@ -3,6 +3,7 @@
 Shebang to create a PY script
 """
 
+
 def pascal_triangle(n):
     """method to produce pascal triangle"""
     if n <= 0:
