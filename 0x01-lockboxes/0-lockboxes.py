@@ -7,7 +7,10 @@ Shebang to create a py script
 def canUnlockAll(boxes):
     """method to check and unlock the box if the
        have a key, return true, else return false"""
+
     n = len(boxes)
+    if (n == 0):
+        return ('No box to visit')
     visited = [False] * n
     visited[0] = True
 
