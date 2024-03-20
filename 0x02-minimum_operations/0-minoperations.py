@@ -7,7 +7,7 @@ Shebang to create a py script
 def minOperations(n):
     """return n number that op will take to reahc the result"""
     def minOperations(n):
-        if n == 1:
+        if n == 0 or not n:
             return 0
     list_db = [0] * (n + 1)
     for i in range(2, n + 1):
