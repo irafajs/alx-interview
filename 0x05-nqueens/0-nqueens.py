@@ -58,4 +58,7 @@ def solve_nqueens(N):
         print(solution)
 
 
-solve_nqueens(sys.argv[1])
+if len(sys.argv) <= 1:
+    print('Usage: nqueens N')
+else:
+    solve_nqueens(sys.argv[1])
