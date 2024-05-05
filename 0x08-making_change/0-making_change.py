@@ -7,22 +7,17 @@ Sheabng to create a PY script
 def makeChange(coins, total):
     """calcule fewes number of coins to reach total"""
 
-    coins.sort(reverse=True)
+    if total <= 0:
+        return 0
 
-    min_coins = float('inf')
-    stack = [(0, total, 0)]
+    dp = [float('inf')] * (total + 1)
+    dp[0] = 0
 
-    while stack:
-        index, remaining_total, count = stack.pop()
+    for coin in coins:
+        for i in range(coin, total + 1):
+            dp[i] = min(dp[i], dp[i - coin] + 1)
 
-        if remaining_total == 0:
-            min_coins = min(min_coins, count)
-            continue
-
-        if remaining_total < 0 or count >= min_coins:
-            continue
-
-        for i in range(index, len(coins)):
-            stack.append((i, remaining_total - coins[i], count + 1))
-
-    return min_coins if min_coins != float('inf') else -1
+    if dp[total] == float('inf'):
+        return -1
+    else:
+        return dp[total]
