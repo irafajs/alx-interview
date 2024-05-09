@@ -5,7 +5,8 @@ Sheabng to create a PY script
 
 
 def makeChange(coins, total):
-    """Method to count coins that met the total"""
+    """calcule fewes number of coins to reach total"""
+
     if total <= 0:
         return 0
 
