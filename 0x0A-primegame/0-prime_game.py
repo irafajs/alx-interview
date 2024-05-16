@@ -34,7 +34,7 @@ def is_prime(num):
 
 def isWinner(x, nums):
     """method to check the game winner"""
-    if x == 0 or x is None or len(nums) == 0:
+    if x == 0 or x < 0 or x is None or len(nums) == 0:
         return None
     maria_wins = 0
     ben_wins = 0
