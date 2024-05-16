@@ -36,9 +36,6 @@ def isWinner(x, nums):
     """method to check the game winner"""
     if x == 0 or x < 0 or x is None or len(nums) == 0:
         return None
-    if len(nums) == 1:
-        nums[0] = 0
-        return None
     maria_wins = 0
     ben_wins = 0
 
